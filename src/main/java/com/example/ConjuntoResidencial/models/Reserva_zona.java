@@ -24,11 +24,12 @@ public class Reserva_zona {
     public Reserva_zona() {
     }
 
-    public Reserva_zona(long id_reserva, LocalDate fecha, LocalTime hora_inicio, Zona_social zona_social) {
+    public Reserva_zona(long id_reserva, LocalDate fecha, LocalTime hora_inicio, Zona_social zona_social, Propietario propietario) {
         this.id_reserva = id_reserva;
         this.fecha = fecha;
         this.hora_inicio = hora_inicio;
         this.zona_social = zona_social;
+        this.propietario = propietario;
     }
 
     public long getId_reserva() {
@@ -70,6 +71,7 @@ public class Reserva_zona {
                 ", fecha=" + fecha +
                 ", hora_inicio=" + hora_inicio +
                 ", zona_social=" + zona_social +
+                ", propietario=" + propietario +
                 '}';
     }
 }

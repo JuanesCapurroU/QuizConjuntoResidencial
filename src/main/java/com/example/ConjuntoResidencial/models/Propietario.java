@@ -11,7 +11,7 @@ public class Propietario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id_propietario;
+    private long id;
     private String nombre;
     private String cedula;
     @Column(name = "fecha_visita", columnDefinition = "DATE")
@@ -32,8 +32,8 @@ public class Propietario {
     public Propietario() {
     }
 
-    public Propietario(long id_propietario, String nombre, String cedula, LocalDate fecha_visita, LocalTime hora_entrada, List<Reserva_parqueadero> reserva_parqueaderos, List<Visitante> visitantes, List<Reserva_zona> reserva_zonas) {
-        this.id_propietario = id_propietario;
+    public Propietario(long id, String nombre, String cedula, LocalDate fecha_visita, LocalTime hora_entrada, List<Reserva_parqueadero> reserva_parqueaderos, List<Visitante> visitantes, List<Reserva_zona> reserva_zonas) {
+        this.id = id;
         this.nombre = nombre;
         this.cedula = cedula;
         this.fecha_visita = fecha_visita;
@@ -44,11 +44,11 @@ public class Propietario {
     }
 
     public long getId_propietario() {
-        return id_propietario;
+        return id;
     }
 
-    public void setId_propietario(long id_propietario) {
-        this.id_propietario = id_propietario;
+    public void setId_propietario(long id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -110,7 +110,7 @@ public class Propietario {
     @Override
     public String toString() {
         return "Propietario{" +
-                "id_propietario=" + id_propietario +
+                "id_propietario=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", cedula='" + cedula + '\'' +
                 ", fecha_visita=" + fecha_visita +
